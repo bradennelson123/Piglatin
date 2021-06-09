@@ -1,20 +1,24 @@
-// check words for vowels, if word starts with vowel, then append way
+function vowelChecker(text) {
+  const vowelArray = ["a", "e" ,"i", "o", "u"];
 
-const vowelArray = ["a", "E", "I", "O", "U"];
-const text = "";
+for (let i = 0; i < vowelArray.length; i ++) {
+  if (vowelArray[i] === text.slice(0, 1)) {   
+    return text.concat("way"); 
+  };
 
-function vowelChecker(text, vowel) {
-  let splicedText = text[0]
-  for (let i = 0; i < vowelArray.length; i +=1) {
-    if (vowelArray[i].toLowerCase() === splicedText.toLowerCase()) {
-      return text.concat("way");
-    };
-    console.log("Looped!");
-  }
-    return false;
 }
-vowelChecker("b", vowelArray)
+return false;
+}
 
 
-// vowelArray = ["a", "e" ,"i", "o", "u"];
-// for each element in the wordAway check if it matches a, e, i, o, u
+
+function multipleWord(text) {
+  const textArray = text.split(" ");
+  console.log(textArray);
+  for (let i = 0; i < textArray.length; i++) {
+    vowelChecker(textArray[i]);
+    console.log(vowelChecker(textArray[i]));
+  }
+}
+
+multipleWord("hello goodbye away up")

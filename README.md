@@ -18,6 +18,7 @@ Code: pigLatin("a");
 Expected Output: "away"
 
 --------------------------------
+For words beginning with one or more consonants, move all of the first consecutive consonants to the end and add "ay". Examples: "code" becomes "odecay" and "move" becomes "ovemay."
 
 Test: "It recognizes words that begin with a vowel in a multiple-word sentence."
 Code: pigLatin("Find an element multiple word sentence with everything vowel");
